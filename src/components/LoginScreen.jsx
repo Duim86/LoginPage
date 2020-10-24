@@ -10,7 +10,7 @@ function LoginScreen(props) {
   return (
     <section>
       {buttonBack && (
-        <Link to="/">
+        <Link className="back-button" to="/">
           <FiArrowLeft size={24} color="#FFF" />
         </Link>
       )}

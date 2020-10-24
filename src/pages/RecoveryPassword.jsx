@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../components/Button';
 import Input from '../components/Input';
 import LoginScreen from '../components/LoginScreen';
 
@@ -13,7 +14,8 @@ function RecoveryPassword() {
         legend="Esqueci a Senha"
         description="Sua redefinição de senha será enviada para o e-mail cadastrado."
       >
-        <Input name="email" label="E-mail" type="email" />
+        <Input id="email" label="E-mail" type="email" />
+        <Button className="form-button" />
       </LoginScreen>
     </div>
   );

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import Button from '../components/Button';
 import Input from '../components/Input';
 import LoginScreen from '../components/LoginScreen';
 import LogoScreen from '../components/LogoScreen';
@@ -12,7 +13,6 @@ import schema from '../utils/validationForm';
 import Check from '../images/check.svg';
 
 import '../styles/pages/login.css';
-import Button from '../components/Button';
 
 function Login() {
   const [rememberMe, setRememberMe] = useState(false);
@@ -21,9 +21,9 @@ function Login() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  function onSubmit(data) {
     console.log(data);
-  };
+  }
 
   return (
     <div className="login">
@@ -33,7 +33,6 @@ function Login() {
           <Input
             id="email"
             type="text"
-            name="email"
             label="E-mail"
             register={register}
             error={
@@ -47,7 +46,6 @@ function Login() {
           <Input
             id="password"
             type="password"
-            name="password"
             label="Senha"
             register={register}
             error={
